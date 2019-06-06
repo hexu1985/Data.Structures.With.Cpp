@@ -1,0 +1,386 @@
+Errata for Ford/Topp Data Structures with C++
+
+Page 10:  Line 2
+replace     
+ const float PI = 3.12152;
+with
+const float PI = 3.12159;
+
+Page 18:  Second  paragraph  
+replace 
+between an ordered list and on SeqList. 
+with
+between an ordered list and an SeqList. 
+
+Page 19: Line 2
+replace
+Preconditions:  None
+with
+Preconditions:  The list is ordered
+
+Page 102:  In EXAMPLE
+replace     
+ cwater.GetLowTemp	and	fwater.GetHighTemp
+with
+cwater.GetLowTemp()	and	fwater.GetHighTemp()
+
+Page 103:  in constructor code
+add a comma to separate highTemp(h) and lowTemp(l)
+Temperature::Temperature(float h, float l) : highTemp(h),
+lowTemp(l) 
+
+Page 128: The constructor should read
+
+		Student(int studid, int studgradepts, int studunits);
+
+Page 135: The first constructor should read
+
+		Grade(char student[], float tscore);
+
+Page 174: in the operator == code, change the return value
+
+return !strcmp(A.filmName, B.filmName);
+
+Page 180: Change question 4.12 (a) by adding the line n = L.GetData(0)*2 and modifying Find
+
+n = L.DeleteFront();
+L.Insert(n);
+n = L.GetData(0)*2;
+if (L.Find(n))
+    L.Delete(16);
+
+Page 182: Fix question 4.3.
+replace
+may exceed system heap capacity
+with
+may exceed system stack capacity
+
+Page 182:  Delete the last paragraph.  It is a simple repeat of text
+
+"Write a program ... is O(n2)"
+ 
+Page 214: The declaration of maleDancers and femaleDancers in the main program should read
+
+		Queue maleDancers, femaleDancers;
+
+Page 223:  6 lines from bottom of page
+replace
+PQuene
+with
+PQueue
+
+Page 229:  middle of page 
+replace
+while (!fin. >> ch)
+with
+while (fin >> ch)
+
+Page 246:  first four lines of the page  replace array name a with arr 
+replace
+a(n++) = S.Pop()		and	S.Push(a[i]);
+with
+arr(n++) = S.Pop()	and	S.Push(arr([i])
+
+Page 248: Move the graph on the bottom of the page between the paragraphs
+51Assume the priority queue list contains integer values with the less than operator A<@ defining the priority order.  The current list contains the elements
+<Place graph here>
+By tracing ...
+
+Page 280:
+The second line should read
+
+ModClass Inverse(ModClass& x);
+
+Page 283: Line 7
+replace 
+(ostream istr,
+with
+(ostream ostr,
+
+Page 304: in the function MathOperator, switch the words right and left in the comments
+replace
+// get left operand	and		// get right operand
+with
+// get right operand	and		// get left operand
+
+Page 309: last part of question 7.2
+replace
+n > 4
+with
+n >= loc
+
+Page 311:  Fix the comment in middle of question 7.6
+replace
+// relational operators.  "==" and "<" must
+with
+// relational operator "==" must
+
+Page 373:  last line
+replace
+cout << Q << endl;
+with
+cout << R << endl;
+
+Page 374: part (f) of question 8.8  Insert a * before the variable c
+replace
+c = DynamicType<char> (char(int(Q)));
+cout << c << char(c) << int(c) << endl;
+with
+*c = DynamicType<char> (char(int(Q)));
+cout << *c << char(*c) << int(*c) << endl;
+
+
+Page 379: fix the declaration of function CapLine in question 8.3
+replace 
+void CapLine(
+with
+int CapLine(
+
+Also add one line at the end of part (a)
+CapLine returns 0 if end of file is reached and 1 otherwise.
+
+Page 380:  in question 8.8   replace the name S with the name source
+replace
+characters of S starting at index pos.  If fewer ...  exist in the tail of S
+with 
+characters of source starting at index pos.  If fewer ...  exist in the tail of source
+
+
+Page 380:  last line on the page
+delete words  pointer to
+allocate space for n String objects. 
+
+Page 381: last sentence in question 8.9
+replace
+Traverse your array of string pointers
+with
+Traverse your array of strings
+
+Page 433: 5th line from the bottom.  Add a statement for variable result. 		
+
+int SeqList<T>::Find(T& item)
+{
+      int result = 0;
+      // search for the item in list. ....
+
+Page 468:  4th last line.  Add blank spaces
+replace
+if (head != NULL&& head->NextNode() !=NULL)
+with
+if (head != NULL && head->NextNode() != NULL)
+
+Page 470:  remove the word const from functions in both 9.16 and 9.17
+replace 
+void Split(const LinkedList<T>& L, LinkedList<T>& L1,
+with
+void Split(LinkedList<T>& L, LinkedList<T>& L1,
+
+
+replace 
+void OddEven(const LinkedList<int>& L, LinkedList<int>& L1,
+with
+void Split(LinkedList<int>& L, LinkedList<int>& L1,
+
+Page 472: Fix misspelling in question 9.26
+replace
+T PeakRear(void);
+with
+T PeekRear(void);
+
+
+
+Page 473: last sentence in question 9.31 (c).  add the phrase a pointer to 
+replace
+Return the header if elem
+with
+Return a pointer to the header if elem
+
+Page 476:  In question 9.9
+replace	
+Programming Exercise 902
+with 
+Programming Exercise 9.2
+
+Page 476:  5th last line on the page
+replace
+while (n > 1);
+with
+while (n > 1 || nc != 0);
+
+Page 477: 2nd last line
+replace
+Written Exercise 9.12 and 9.13
+with
+Written Exercise 9.11 and 9.12
+
+Page 579. Middle of the page.   replace tree with rhs
+replace
+root = CopyTree(tree.root);		and   		size = tree.size;
+with
+root = CopyTree(rhs.root);		and 		size = rhs.size;
+
+Page 603: Declaration of InorderAssign  in 11.7 (c)
+replace
+Array<int>& A, int i);
+with
+Array<int>& A, int& i);		
+
+Page 604: Fix question 11.8 (b) (1)
+replace
+a + b = c * d + e
+with	
+a + b - c * d + e
+
+Page 604: 5th line from the bottom.  Redefine the function BuildExpTree
+
+TreeNode<char> *BuildExpTree(char * &exp);
+
+Page 633: After the 3rd line at the top of the page
+List(void);
+add
+virtual ~List(void);
+
+Page 643: The first line of run, replace 70 by 60. It should read
+
+Sales person 300    Total Units Sold 60
+
+Page 675: remove method Delete in line 4
+
+Page 675: paragraph 1 should read
+
+The method Insert places elt in the middle of the list. Note that Delete from the base class SeqList deletes a given value from the list. Develop the implementation of MidList and use it in the following test program.
+
+Page 755: The fourth line of text should read
+
+		to identify a minimum path that connects a starting vertex, sVertex, with
+
+Page 767:  Fix the Head (A) and Heap (B) data in question 13.13
+
+(a)	insert 15			(a)	delete 15
+(b)	insert 35			(b)	insert 35
+(c)	delete 5			(c)	insert 65
+(d)	insert 40			(d)	delete 20
+(e)	insert 10			(e)	delete 22
+       (f)	insert 5
+
+Page 769:  add an include statement 9 lines from the bottom of the page
+#include "treeprnt.h"
+
+Page 774.  In question 13.3
+replace
+Program 13.3
+with	
+Program 13.2
+
+Page 775: Fix the last lines for question 13.9
+replace
+The following is the declaration of the operator and an example of its use.
+with
+When used as a postincrement operator, its declaration is
+void  operator++ (int);
+
+Page 776: First line
+replace
+Traverse a binary search tree
+with
+Traverse a binary search tree as follows:
+
+Page 776:  In the declaration of LevelorderIterator in question 13.10
+replace
+LevelorderIterator(Treenode<T>* lst);
+with
+LevelorderIterator(Treenode<T>* t);
+
+Page 776:  The data and graph for question 13.10 needs to be fixed
+replace
+{100,55,135,145,25,106,88,90,5,26,67,45,99,33};
+with
+{100,55,135,145,25,106,88,5,26,33,45,63,142,33};
+
+
+Fix the bottom of the graph
+
+33			   33
+          /         \	      becomes	         \
+        33       45			           45
+         /
+       33
+Page 787:
+
+The box labeled M-R should be labeled L-R.
+
+Page 791:  In the middle of the page, part of the program was not indented
+if (high - low == 1)
+{
+       if (A[high] < A[low])
+Swap(A[low],A[high]);
+       return;
+}
+
+Page 792:  Delete the second last  >}@ just above the solid line separating the program from text
+
+Page 818: The last line of the page should read
+
+	f.read((char *)A, 20*sizeof(int));
+
+Page 861.  Put an (*) at the end of both exercise 14.11 and 14.12.  This will make reference to the following note that must be added.
+
+(*) The DeleteFront method of the LinkedList class uses the declaration
+T frontItem;
+      The KeyValue class does not have a default constructor.  Redefine DeleteFront as follows:
+T& DeleteFront(void);
+      Use the new class. 
+
+Fix Answers to Selected Written Exercises
+
+Page 872:  Replace 8.8 (c) with
+The first statement is incorrect because the class does not have a default constructor.
+Allocates a single object of type DynamicType<char>. The char value is >A=.
+
+Page 873: Replace 9.1 (d) with     8  8
+   Replace 9.1(e) with   77  77
+
+Page 874:  9.7 (a) needs a redefinition of InsertFront
+
+template <class T> void InsertFront (Node<T>& header, T item)
+
+Page 875:  The definition of the DeleteNodeRight function has some errors.  Replace  next  with  right   and add a return statement;
+
+     {
+DNode<T> *tempPtr = right;  // save address of node
+if (right == this)
+return NULL;  // we point to ourselves. quit!
+// current node points to successor of tempPtr.
+right = tempPtr->right;
+// successor of tempPtr points back to curr node
+tempPtr->right->left = this;
+return tempPtr;
+       }
+
+Page 879:   In row 3 of 13.13, 
+replace
+Insert 35:  10  25  15  35  50  20  35
+with	
+Insert 35:  5  10  15  25  50  20  35
+
+
+Page 879:   Fix 13.16 (c)  
+replace
+Aaehpify@
+with	
+Aaefpilhy@
+Page 879:   Fix 13.23 (b)  
+replace
+Depth-first:  A E D C	Breadth-first:	A  C  D  E
+with	
+Depth-first:  A D C	Breadth-first:	A  C  D
+
+Page 880:  The graph for 14.14 () must be fixed. The elements of each linked list were inserted at the front rather than the rear of the list. The algorithm described in the text inserts each element at the rear of its corresponding list. For the list at index 3 should be 257 _ 567 instead of 567 _ 257.
+
+Page 880: The entries in 14.24(a) should be
+
+33   7   1  3   13   -1   12   4   34   -1   38   6   27   -1   22   -1  Empty   -1    Empty   -1   Empty  -1
+
+
+
+

@@ -1,0 +1,21 @@
+5
+SaltLakeCity
+Albuquerque
+Phoenix
+SanFrancisco
+SanDiego
+14
+SaltLakeCity 		Albuquerque 		604
+Albuquerque 		SaltLakeCity 		604
+SaltLakeCity 		Phoenix 			648
+Phoenix 			SaltLakeCity 		648
+SaltLakeCity 		SanFrancisco 		752
+SanFrancisco 		SaltLakeCity 		752
+Albuquerque 		Phoenix 			432
+Phoenix 			Albuquerque 		432
+SanFrancisco 		Phoenix 			763
+Phoenix 			SanFrancisco 		763
+SanFrancisco 		SanDiego 			504
+SanDiego 			SanFrancisco 		504
+SanDiego 			Phoenix 			355
+Phoenix 			SanDiego 			355
